@@ -1,0 +1,49 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+
+        <div class="row">
+            <button mat-icon-button (click)="sidenav.toggle()" value="sidebarclosed">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
+        <div class="row">
+            <img src="assets/icon/icons8-google-keep-48.png">
+        </div>
+        <div>
+            <h2><span>Fundoo</span></h2>
+        </div>
+
+        <div class="searchbar">
+            <div class="searchIcon">
+                <mat-icon matSuffix>search</mat-icon>
+            </div>
+            <div>
+                <input class="input" matInput type="searchbar" placeholder="  Search" style="outline:none;">
+            </div>
+        </div>
+        <div class="pl">
+            <mat-icon matSuffix>refresh</mat-icon>
+        </div>
+        <div class="pl">
+            <mat-icon matSuffix>listview</mat-icon>
+        </div>
+        <div class="pl">
+            <mat-icon matSuffix>settings</mat-icon>
+        </div>
+
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<!--  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+
+<mat-sidenav-container>
+    <mat-sidenav mode="side" #drawer>
+
+       
+            <button mat-menu-item> Notes</button><br>
+            <button mat-menu-item>Labels</button> <br>
+            <button mat-menu-item>Remindars</button>
+       
+    </mat-sidenav>
+    <router-outlet></router-outlet>
+</mat-sidenav-container>

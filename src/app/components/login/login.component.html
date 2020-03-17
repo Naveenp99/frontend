@@ -1,0 +1,48 @@
+<mat-card class="card">
+    <h1>
+        <span class="blue">F</span>
+        <span class="red">U</span>
+        <span class="purple">N</span>
+        <span class="blue">D</span>
+        <span class="green">O</span>
+        <span class="red">O</span>
+    </h1>
+    <h2><span class="green">Sign in</span></h2>
+    <h3 style=text-align:center><span class="blue">to continue to Fundoo</span></h3>
+    <form class="example-form">
+
+        <mat-form-field class="example-full-width" appearance="outline" class="line">
+            <mat-label class="labelColor">Email</mat-label>
+            <input matInput [formControl]="email" placeholder="Ex. pat@example.com" required>
+            <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+                Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="email.hasError('required')">
+                Email is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="name-width" appearance="outline" class="name-width-small">
+            <mat-label class="labelColor">Password</mat-label>
+            <input matInput [formControl]="password" placeholder="" type="password" required>
+            <mat-error *ngIf="password.hasError('required')">
+                Password is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="password.hasError('minlength')">
+                Minimum <strong>length</strong> is 8
+            </mat-error>
+        </mat-form-field>
+    </form>
+
+    <div class="linked">
+        <span><a href="register">Create account</a></span>
+    </div>
+
+    <div class="link">
+    <span><a href="forgetpassword">ForgetPassword</a></span>
+    </div>
+
+    <div class="example-button-row">
+        <button mat-raised-button color="primary" (click)="OnLoginForm()">Next</button>
+    </div>
