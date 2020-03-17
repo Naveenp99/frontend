@@ -2,7 +2,7 @@
     <mat-toolbar-row>
 
         <div class="row">
-            <button mat-icon-button (click)="sidenav.toggle()" value="sidebarclosed">
+            <button type="button" mat-button (click)="drawer.toggle()">
                 <mat-icon>menu</mat-icon>
             </button>
         </div>
@@ -36,8 +36,29 @@
 
 <!--  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 
-<mat-sidenav-container>
-    <mat-sidenav mode="side" #drawer>
-    </mat-sidenav>
+<br>
+
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer mode="side">
+        
+            <div class="inline">
+               
+                <button  style="width: 180px;border-radius: 10px 10px 10px 10px;" (click)="showFiller = !showFiller" mat-raised-button> Notes </button> <br> <br>
+              
+              
+                <button  style="width: 180px;border-radius: 10px 10px 10px 10px;" (click)="showFiller = !showFiller" mat-raised-button> Reminders </button> <br> <br>
+        
+            </div>
+            <div class="inline">
+                <br>
+         <span><h5>LABELS</h5></span>
+                <br>
+                <button style="width: 180px;border-radius: 10px 10px 10px 10px;" (click)="showFiller = !showFiller" mat-raised-button> Edit labels </button> <br> <br>
+            </div>
+            <br>
+            <button style="width: 180px;border-radius: 10px 10px 10px 10px;" (click)="showFiller = !showFiller" mat-raised-button> Archive </button> <br> <br>
+            <button style="width: 180px;border-radius: 10px 10px 10px 10px;" (click)="showFiller = !showFiller" mat-raised-button> Trash </button>
+       
+    </mat-drawer>
     <router-outlet></router-outlet>
-</mat-sidenav-container>
+</mat-drawer-container>

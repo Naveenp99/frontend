@@ -5,10 +5,7 @@
   display: flex;
   min-width: 50px;
 }
-.rows {
-  display: flex;
-  min-width: 50px;
-}
+
 .pl {
     padding-left: 50px;
     text-align: center;
@@ -26,21 +23,25 @@
     height: 44px;
     width: 35em;
     padding-left: 50px;
+    margin-left: 27px;
 
 }
 .input{
     width: 47em;
     padding: 10px;
     border-style: none;
+    
 }
 .searchIcon{
     display: flex;
     align-items: center;
+    padding-left: 0px;
 }
+.example-container {
+    width: 1300px;
+    height: 540px;
+  }
 
-.notes{
-    display: flex;
-   
+.inline {
+    border-bottom:thin double burlywood;
 }
-
-
